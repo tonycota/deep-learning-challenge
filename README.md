@@ -1,4 +1,6 @@
 # Deep Learning Challenge
+![Alt Text](Resources/NN.jpeg)
+
 ### Armando Cota's Submission for Module 21
 
 ## Background
@@ -136,6 +138,8 @@ would have been irrelevant as well but as you can see in the first optimization 
 
 ### Compiling, Training, and Evaluating the Model
 * After many iterations and countless trial and errors I had to reach out to my private tutor. I felt I was getting further and further away from the 75% goal. After consulting with a tutor I decided to start with reducing the epochs count to 30 (to save time), and began heavy steps towards optimization there. Starting with activation functions, I started seeing better results with ReLu activation function and changing the number of nodes in the hidden layers both to 15. Once I started seeing better results I bumped the number of epochs back up to 100 and achieved a 72.7% accuracy score. The final editions to the neural network model can be found in optimization_notebooks/deep_learning_optimization_success.ipynb. Where a final accuracy score of 78% was achieved. 
+
+![Alt Text](Resources/final_result.jpg)
 
 ### Summary
 To summarize, our final model was able to achieve an accuracy score of 78%. After many trial and error attempts at generating better results with adjustments not only to the training of the model but the preprocessing of the data as well, we got satisfactory results. 
