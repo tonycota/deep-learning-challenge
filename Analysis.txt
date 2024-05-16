@@ -1,0 +1,22 @@
+# Report on the Neural Network Model
+### Overview
+The purpose of this analysis is to create a neural network to make predictions of success rate of applicants of a non profit organization, Alphabet Soup. From the Alphabet Soup's team, 
+we have a CSV file containing more than 34,000 organizations that have received funding from Slphabet Soup over the years which gives us more than enough needed information to accomplish 
+our goals. The analysis involves us preprocessing the data by dropping unneccessary columns in dataframes, determining data points for each unique value, splitting the preprocessed data into features arrays/target arrays, and scaling the training and testing feature datasets by implementing a StandardScaler instance.  
+A neural network model is then compiled, trained, and evaluated to determine loss/accuracy which you find in deep_learning_challenge_initial_notebook.ipynb. 
+We then use our knowledge of tensorflow to optimize our models by adjusting dropped columns, neurons, hidden layers activation functions etc. The end goal was to achieve an accuracy score of 75% or better. 
+
+### Results
+* Our target variables is "IS_SUCCESSFUL"
+* The feature variables is essentially everything else in the DataFrame except "IS_SUCCESSUL" and the "EIN" column, which answers the next bullet:
+* The EIN column (when dropped from the dataframes) didn't seem to have an effect on accuracy score, initially I thought 'NAME', 'AFFILIATION', 'STATUS', and 'ASK_AMT'
+would have been irrelevant as well but as you can see in the first optimization attempt I was thoroughly incorrect. (Accuracy dropped to 65%)
+
+### Compiling, Training, and Evaluating the Model
+* After many iterations and countless trial and errors I had to reach out to my private tutor. I felt I was getting further and further away from the 75% goal. After consulting with a tutor I decided to start with reducing the epochs count to 30 (to save time), and began heavy steps towards optimization there. Starting with activation functions, I started seeing better results with ReLu activation function and changing the number of nodes in the hidden layers both to 15. Once I started seeing better results I bumped the number of epochs back up to 100 and achieved a 72.7% accuracy score. The final editions to the neural network model can be found in optimization_notebooks/deep_learning_optimization_success.ipynb. Where a final accuracy score of 78% was achieved. 
+
+![Alt Text](Resources/final_result.jpg)
+
+### Summary
+To summarize, our final model was able to achieve an accuracy score of 78%. After many trial and error attempts at generating better results with adjustments not only to the training of the model but the preprocessing of the data as well, we got satisfactory results. 
+I would suggest a random forest model, not only because I know how to implement it better, but my tutor mentioned to me that it generates better results for binary classification solutions. 
